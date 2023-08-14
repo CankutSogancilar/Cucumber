@@ -30,9 +30,7 @@ public class _01_LoginSteps {
     @Then("User should Login successfully")
     public void user_should_login_successfully() {
         //Assert.assertTrue(dc.dashBoard.getText().equalsIgnoreCase("Dashboard")); ---> It is also correct
-        WebDriverWait wait=new WebDriverWait(BaseDriver.getDriver(), Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOf(dc.dashBoard));
-        Assert.assertTrue(dc.dashBoard.isDisplayed());
+        dc.assertText(dc.dashBoard,"Dashboard");
     }
 
 }
