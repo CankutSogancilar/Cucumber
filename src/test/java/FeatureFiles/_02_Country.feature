@@ -13,19 +13,30 @@
     As a user, I want to be able to create, delete and update countries
   so that I can update the country list
 
-  Scenario: Create a new country
-    Given Navigate to Campus
-    And Enter username and password
-    And Click on Login Button
-    And Navigate to Country page
-    When Create a new country
-    Then Success message should be displayed
-
-    Scenario: Delete a country
+    Background:
       Given Navigate to Campus
       And Enter username and password
       And Click on Login Button
       And Navigate to Country page
+@Smoke
+  Scenario: Create a new country
+    When Create a new country
+    Then Success message should be displayed
+@Smoke
+    Scenario: Delete a country
+      And Delete a country
+      Then Success message should be displayed
+@Regression
+    Scenario:
+      And Click on add button
+      And Enter "EdaS8" as country name and "edas8" as country code
+      When Click on save button
+      Then Success message should be displayed
+
+
+        #TODO Update the country you created
+
+    Scenario: Delete a country
       And Delete a country
       Then Success message should be displayed
 

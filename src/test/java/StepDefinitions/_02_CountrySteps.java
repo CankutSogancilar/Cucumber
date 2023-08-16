@@ -30,8 +30,8 @@ public class _02_CountrySteps {
     @When("Create a new country")
     public void createANewCountry() {
         dc.clickMethod(dc.addButton);
-        dc.sendKeysMethod(dc.formNameInput, "eda98888888889");
-        dc.sendKeysMethod(dc.formCodeInput, "BTC88");
+        dc.sendKeysMethod(dc.formNameInput, "EdaS8");
+        dc.sendKeysMethod(dc.formCodeInput, "edas8");
         dc.clickMethod(dc.saveButton);
     }
 
@@ -42,8 +42,8 @@ public class _02_CountrySteps {
 
     @And("Delete a country")
     public void deleteACountry() {
-        dc.sendKeysMethod(dc.searchNameInput, "eda98888888889");
-        dc.sendKeysMethod(dc.deleteCode, "BTC88");
+        dc.sendKeysMethod(dc.searchNameInput, "EdaS8");
+        dc.sendKeysMethod(dc.deleteCode, "edas8");
         dc.clickMethod(dc.searchButton);
 
         //try {
@@ -58,4 +58,21 @@ public class _02_CountrySteps {
 
 
     }
+
+    @And("Click on add button")
+    public void clickOnAddButton() {
+        dc.clickMethod(dc.addButton);
+    }
+
+    @And("Enter {string} as country name and {string} as country code")
+    public void enterAsCountryNameAndAsCountryCode(String countryName, String countryCode) {
+        dc.sendKeysMethod(dc.formNameInput,countryName);
+        dc.sendKeysMethod(dc.formCodeInput,countryCode);
+    }
+
+    @When("Click on save button")
+    public void clickOnSaveButton() {
+        dc.clickMethod(dc.saveButton);
+    }
+
 }

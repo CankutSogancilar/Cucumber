@@ -12,8 +12,8 @@ import java.util.List;
 public class DialogContent extends MyMethods {
 
 
-    public DialogContent(){
-        PageFactory.initElements(BaseDriver.getDriver(),this);
+    public DialogContent() {
+        PageFactory.initElements(BaseDriver.getDriver(), this);
     }
 
     @FindBy(xpath = "//input[@data-placeholder='Username']")
@@ -22,7 +22,7 @@ public class DialogContent extends MyMethods {
     @FindBy(css = "input[data-placeholder='Password']")
     public WebElement password;
 
-    @FindBy(xpath="//span[normalize-space()='LOGIN']")
+    @FindBy(xpath = "//span[normalize-space()='LOGIN']")
     public WebElement loginButton;
 
     @FindBy(xpath = "//div[@class='ng-star-inserted']//span[normalize-space()='Dashboard']")
@@ -30,7 +30,7 @@ public class DialogContent extends MyMethods {
     //(//div//span[normalize-space()='Dashboard'])[2]
 
     @FindBy(xpath = "//ms-add-button")
-    public  WebElement addButton;
+    public WebElement addButton;
 
     @FindBy(xpath = "(//input[@data-placeholder='Name'])[2]")
     public WebElement formNameInput;
@@ -59,7 +59,53 @@ public class DialogContent extends MyMethods {
     @FindBy(xpath = "//span[normalize-space()='Delete']")
     public WebElement deleteConfirmButton;
 
+    @FindBy(xpath = "(//input[@data-placeholder='Short Name'])[2]")
+    public WebElement shortName;
 
+    @FindBy(xpath = "//button[@color='accent']")
+    public WebElement editButton;
+
+    @FindBy(xpath = "//input[@data-placeholder='Short Name']")
+    public WebElement searchShortName;
+
+    @FindBy(xpath = "//input[@data-placeholder='Integration Code']")
+    public WebElement feeIntegrationCode;
+
+    @FindBy(xpath = "(//input[@data-placeholder='Priority'])[2]")
+    public WebElement feePriority;
+
+    @FindBy(xpath = "//ms-dialog-buttons")
+    public WebElement Clicksomewhere;
+
+    @FindBy(xpath = "//input[@type='text']")
+    public WebElement createExamName;
+
+    @FindBy(xpath = "(//span[text()='Academic Period'])[1]")
+    public WebElement academicPeriod;
+
+    @FindBy(xpath = "//span[normalize-space()='Staj 2023']")
+    public WebElement academicPeriodOption;
+
+    @FindBy(xpath = "(//span[text()='Grade Level'])[1]") //
+    public WebElement gradeLevel;
+
+    @FindBy(xpath = "//span[normalize-space()='bALAYPn']")
+    public WebElement gradeLevelOption;
+
+    @FindBy(xpath = "//span[text()='Description']")
+    public WebElement examDescription;
+
+    @FindBy(xpath = "//span[text()='Notes']")
+    public WebElement examNotes;
+
+    @FindBy(css="body[id='tinymce']>p")
+    public WebElement descriptionAndNoteText;
+
+    @FindBy(xpath = "//iframe[@class='tox-edit-area__iframe']")
+    public WebElement iFrame;
+
+    @FindBy(xpath = "(//span[normalize-space()='Save & Close'])[1]")
+    public WebElement feeSaveButton;
 
 
 

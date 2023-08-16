@@ -13,6 +13,7 @@ public class MyMethods {
     public WebDriverWait wait=new WebDriverWait(BaseDriver.getDriver(), Duration.ofSeconds(20));
 
     public void clickMethod(WebElement element){
+        waitUntilVisible(element);
         wait.until(ExpectedConditions.elementToBeClickable(element));
         scrollToElement(element);
         element.click();
