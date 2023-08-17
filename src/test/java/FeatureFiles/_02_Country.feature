@@ -18,15 +18,15 @@
       And Enter username and password
       And Click on Login Button
       And Navigate to Country page
-@Smoke
+@SmokeTest
   Scenario: Create a new country
     When Create a new country
     Then Success message should be displayed
-@Smoke
+@SmokeTest
     Scenario: Delete a country
       And Delete a country
       Then Success message should be displayed
-@Regression
+@RegressionTest
     Scenario:
       And Click on add button
       And Enter "EdaS8" as country name and "edas8" as country code
