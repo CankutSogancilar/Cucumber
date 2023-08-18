@@ -10,7 +10,7 @@ import java.time.Duration;
 
 public class MyMethods {
 
-    public WebDriverWait wait=new WebDriverWait(BaseDriver.getDriver(), Duration.ofSeconds(20));
+    public WebDriverWait wait=new WebDriverWait(BaseDriver.getDriver(), Duration.ofSeconds(10));
 
     public void clickMethod(WebElement element){
         waitUntilVisible(element);

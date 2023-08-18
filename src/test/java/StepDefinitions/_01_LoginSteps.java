@@ -19,8 +19,8 @@ public class _01_LoginSteps {
     @When("Enter username and password")
     public void enter_username_and_password() {
 
-        dc.username.sendKeys("turkeyts");
-        dc.password.sendKeys("TechnoStudy123");
+        dc.sendKeysMethod(dc.username,"turkeyts");
+        dc.sendKeysMethod(dc.password,"TechnoStudy123");
 
     }
     @When("Click on Login Button")
