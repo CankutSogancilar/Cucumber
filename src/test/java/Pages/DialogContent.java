@@ -1,8 +1,9 @@
 package Pages;
 
-import Utilities.BaseDriver;
+
 //import io.cucumber.java.zh_cn.假如;
 import Utilities.MyMethods;
+import Utilities.ParameterDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -13,13 +14,13 @@ public class DialogContent extends MyMethods {
 
 
     public DialogContent() {
-        PageFactory.initElements(BaseDriver.getDriver(), this);
+        PageFactory.initElements(ParameterDriver.getDriver(), this);
     }
 
-    @FindBy(xpath = "//input[@data-placeholder='Username']")
+    @FindBy(xpath = "//input[@placeholder='Username']")
     public WebElement username;
 
-    @FindBy(css = "input[data-placeholder='Password']")
+    @FindBy(xpath = "//input[@placeholder='Password']")
     public WebElement password;
 
     @FindBy(xpath = "//span[normalize-space()='LOGIN']")

@@ -1,6 +1,6 @@
 Feature: Data Table Example
 
-  @SmokeTest @RegressionTest
+  @Smoke @Regression
   Scenario: Single Data Table
     Given Go to the WebPage
     And Fill the form with valid data

@@ -7,7 +7,7 @@ Feature: Fee Functionality
     And Click on Login Button
     And Navigate to Fees page
 
-  @SmokeTest
+  @Smoke
   Scenario: Create a Fee
     And Click on add button
     And Fill  the add fee form

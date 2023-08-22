@@ -1,7 +1,7 @@
 package Pages;
 
-import Utilities.BaseDriver;
 import Utilities.MyMethods;
+import Utilities.ParameterDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -10,7 +10,7 @@ public class LeftNullBar extends MyMethods {
 
 
     public LeftNullBar(){
-        PageFactory.initElements(BaseDriver.getDriver(),this);
+        PageFactory.initElements(ParameterDriver.getDriver(),this);
     }
 
     @FindBy(xpath="(//span[text()='Setup'])[1]")

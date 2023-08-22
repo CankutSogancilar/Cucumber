@@ -3,6 +3,7 @@ package StepDefinitions;
 import Pages.DialogContent;
 import Pages.LeftNullBar;
 import Utilities.BaseDriver;
+import Utilities.ParameterDriver;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -38,7 +39,7 @@ public class _07_EntranceExamsSteps {
 
         dc.clickMethod(dc.examDescription);
         dc.wait.until(ExpectedConditions.visibilityOf(dc.iFrame));
-        BaseDriver.getDriver().switchTo().frame(0);
+        ParameterDriver.getDriver().switchTo().frame(0);
         dc.sendKeysMethod(dc.descriptionAndNoteText, dataList.get(0));
         BaseDriver.getDriver().switchTo().defaultContent();
 
@@ -49,8 +50,8 @@ public class _07_EntranceExamsSteps {
         List<String> dataList = dataTable.asList(String.class);
         dc.clickMethod(dc.examNotes);
         dc.wait.until(ExpectedConditions.visibilityOf(dc.iFrame));
-        BaseDriver.getDriver().switchTo().frame(0);
+        ParameterDriver.getDriver().switchTo().frame(0);
         dc.sendKeysMethod(dc.descriptionAndNoteText, dataList.get(0));
-        BaseDriver.getDriver().switchTo().defaultContent();
+        ParameterDriver.getDriver().switchTo().defaultContent();
     }
 }

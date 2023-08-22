@@ -1,0 +1,9 @@
+1- What is Apache POI?
+     It is a a Java Library.
+
+
+2- Why do we use it?
+     It is used to get Data from an Excel file and to put data to an Excel file.
+
+3- How do you use it?
+     I create a FileInputStream to get data from excel and FileOutputStream to write data in excel.

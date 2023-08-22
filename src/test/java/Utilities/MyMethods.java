@@ -10,7 +10,7 @@ import java.time.Duration;
 
 public class MyMethods {
 
-    public WebDriverWait wait=new WebDriverWait(BaseDriver.getDriver(), Duration.ofSeconds(10));
+    public WebDriverWait wait=new WebDriverWait(ParameterDriver.getDriver(), Duration.ofSeconds(4));
 
     public void clickMethod(WebElement element){
         waitUntilVisible(element);
@@ -36,7 +36,7 @@ public class MyMethods {
     }
 
     public void scrollToElement(WebElement element){
-        JavascriptExecutor js = (JavascriptExecutor) BaseDriver.getDriver();
+        JavascriptExecutor js = (JavascriptExecutor) ParameterDriver.getDriver();
         js.executeScript("arguments[0].scrollIntoView();", element);
     }
 

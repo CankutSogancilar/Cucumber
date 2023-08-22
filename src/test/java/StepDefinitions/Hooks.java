@@ -1,6 +1,7 @@
 package StepDefinitions;
 
 import Utilities.BaseDriver;
+import Utilities.ParameterDriver;
 import io.cucumber.java.*;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -18,10 +19,10 @@ public class Hooks {
     public void afterScenario(Scenario scenario){
 
         if (scenario.isFailed()){ // takes screenshot when the scenario fails
-            final byte[] byteImage = ((TakesScreenshot) BaseDriver.getDriver()).getScreenshotAs(OutputType.BYTES);
+            final byte[] byteImage = ((TakesScreenshot) ParameterDriver.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(byteImage, "image/png", scenario.getName());
         }
-        BaseDriver.quitDriver();
+        ParameterDriver.quitDriver();
     }
 
     }
