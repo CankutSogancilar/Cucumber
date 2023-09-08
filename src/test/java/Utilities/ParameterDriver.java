@@ -19,7 +19,7 @@ public class ParameterDriver {
         if (threadDriver.get() == null) {
 
             if (threadDriverName.get()==null){
-                threadDriverName.set("chrome");
+                threadDriverName.set("firefox");
             }
             Logger logger = Logger.getLogger("");
             logger.setLevel(Level.SEVERE);
