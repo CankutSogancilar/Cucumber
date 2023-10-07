@@ -58,4 +58,13 @@ public class DBUtilities {
         DBConnectionClose();
         return table;
     }
+    public static void main(String[] args) {
+        List<List<String>> list = getData("select name from states");
+        for (List<String> innerList: list){
+            for (String state: innerList){
+                System.out.println("state = " + state);
+            }
+        }
+    }
+
 }

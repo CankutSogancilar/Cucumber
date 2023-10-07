@@ -108,6 +108,11 @@ public class DialogContent extends MyMethods {
     @FindBy(xpath = "(//span[normalize-space()='Save & Close'])[1]")
     public WebElement feeSaveButton;
 
+    @FindBy(xpath = "//tbody[@role='rowgroup']//td[2]")
+    public List<WebElement> statesList;
+
+
+
 
 
 
